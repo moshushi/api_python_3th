@@ -17,6 +17,8 @@ class Figure:
         summ = 0
         for i in self.args:
             summ += i
+            # if i <= 0:
+            #     raise ValueError("Отрицательный аргумент")
         return summ
 
     @property
@@ -34,3 +36,6 @@ class Figure:
 # print(d.area)
 # d.add_area(e)
 # print(d.add_area(e))
+# m = Figure(2,4)
+# print(m.area)
+# print(m.perimeter)
