@@ -1,41 +1,39 @@
 class Figure:
-    def __init__(self, *args):
-        if len(args) < 1:
-            raise ValueError("Количество аргументов меньше 1")
-        self.name = "Figure"
-        # self.area = None
-        self.args = args
+    def __init__(self, a):
+        self.name = Figure
+        self.a = a
+        self.valid = self._is_valid
 
-    # @property
-    # def number_of_side(self, args):
-    #     if len(args) < 1:
-    #         raise ValueError("Количество аргументов меньше 1")
-    #     return self._number_of_side
+    @property
+    def _is_valid(self):
+        if self.a < 0:
+            raise ValueError("Отрицательный аргумент")
+        return True
 
     @property
     def perimeter(self):
-        summ = 0
-        for i in self.args:
-            summ += i
-            # if i <= 0:
-            #     raise ValueError("Отрицательный аргумент")
-        return summ
+        return self.a
 
     @property
     def area(self):
-        return self.perimeter
+        return self.a
 
-    def add_area(self, figa):
-        if not isinstance(figa, Figure):
-            return ValueError("Добавляемый объект не фигура")
-        return self.area + figa.area
+    # @property
+    def add_area(self, figure):
+        if not isinstance(figure, Figure):
+            return ValueError("Переданный объект не фигура")
+        return self.area + figure.area
 
-# d = Figure(5)
-# e = Figure(6)
-# print(d.name)
-# print(d.area)
-# d.add_area(e)
-# print(d.add_area(e))
-# m = Figure(2,4)
-# print(m.area)
-# print(m.perimeter)
+
+
+
+
+f = Figure(1)
+print(f.valid)
+print(f.perimeter)
+print(f.area)
+# e = Figure(-1)
+# print(e.is_valid)
+l = Figure(5)
+print(l.add_area(f))
+# m = Figure()
