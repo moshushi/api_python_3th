@@ -25,15 +25,12 @@ class Figure:
         return self.area + figure.area
 
 
+# f = Figure(1)
+# print(f.name)
+# print(f.valid)
+# print(f.perimeter)
+# print(f.area)
+# # e = Figure(-1)
+# l = Figure(5)
+# print(l.add_area(f))
 
-
-
-f = Figure(1)
-print(f.valid)
-print(f.perimeter)
-print(f.area)
-# e = Figure(-1)
-# print(e.is_valid)
-l = Figure(5)
-print(l.add_area(f))
-# m = Figure()
